@@ -1,0 +1,122 @@
+/* ═══════════════════════════════════════════════════
+   HERBAL TEA & TISANE THEME — Natural & Earthy
+   ═══════════════════════════════════════════════════ */
+
+:root {
+  /* Green Tea & Tisane Palette */
+  --primary:        #2b4c38;       /* Deep Forest / Herbal Green */
+  --primary-light:  #3e694f;
+  --accent-green:   #4e8760;
+  --tea-amber:      #c48b47;       /* Warm infusion amber */
+  --sage:           #8fa89b;
+  --kraft-bg:       #f5ede2;       /* Natural kraft paper tone */
+  --light-bg:       #f7f9f6;
+  --surface:        #ffffff;
+  
+  /* Text & Border */
+  --text-main:      #1f2d24;
+  --text-muted:     #63746a;
+  --border:         #e2e8e3;
+  --border-focus:   #4e8760;
+
+  /* UI Tokens */
+  --radius:         10px;
+  --radius-lg:      18px;
+  --shadow:         0 4px 20px rgba(43, 76, 56, 0.08);
+  --shadow-hover:   0 8px 30px rgba(43, 76, 56, 0.15);
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Cairo', sans-serif;
+  background-color: var(--light-bg);
+  color: var(--text-main);
+  line-height: 1.6;
+  direction: rtl;
+  text-align: right;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button, input {
+  font-family: inherit;
+}
+
+/* ── Top Header / Brand ── */
+.navbar {
+  height: 70px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.leaf-icon {
+  font-size: 1.6rem;
+}
+
+.brand-title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.prototype-tag {
+  background: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeeba;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 20px;
+}
+
+/* ── Toast Notification ── */
+.toast {
+  position: fixed;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: var(--primary);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s;
+  opacity: 0;
+  z-index: 999;
+}
+
+.toast.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 20px;
+  }
+}

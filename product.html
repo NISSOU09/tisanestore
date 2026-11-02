@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>خلطة الأعشاب الطبيعية — نموذج العرض</title>
+  
+  <!-- Arabic & Modern Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="pages.css"/>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <header class="navbar">
+    <div class="nav-brand">
+      <span class="leaf-icon">🌿</span>
+      <span class="brand-title">أعشاب الشفاء الطبيعية</span>
+    </div>
+    <div class="prototype-tag">نسخة تجريبية (Prototype)</div>
+  </header>
+
+  <div class="toast" id="toast"><span id="toastMsg"></span></div>
+
+  <main class="product-detail-page">
+    <div class="detail-layout">
+
+      <!-- Product Image -->
+      <div class="detail-images">
+        <div class="detail-main-img">
+          <img src="tisanepack.jpg" alt="خلطة الزهورات والشاي الطبيعي">
+          <span class="badge-herbal">طبيعي 100%</span>
+        </div>
+      </div>
+
+      <!-- Product Info & Order Form -->
+      <div class="detail-info">
+        <div class="detail-cat">زهورات وأعشاب طبية</div>
+        <h1 class="detail-title" id="productName">خلطة الزهورات للإنفلونزا والحمى</h1>
+
+        <div class="product-badge-strip">
+          <span class="stock-status">✓ متوفر حالياً</span>
+          <span class="natural-tag">خالي من المواد الحافظة</span>
+        </div>
+
+        <div class="detail-price-box">
+          <div class="detail-price" id="productPrice">1,800 د.ج</div>
+          <div class="detail-old-price">2,400 د.ج</div>
+        </div>
+
+        <!-- Very brief description requested -->
+        <p class="detail-desc" id="productDesc">
+          خلطة طبيعية مهدئة وفعالة، مجرّبة لتخفيف أعراض الزكام والإنفلونزا وخفض الحمى وطرد التعب.
+        </p>
+
+        <!-- Pack selection / variants -->
+        <div class="pack-selector">
+          <label class="form-label">اختر الحجم:</label>
+          <div class="variant-chips">
+            <button class="variant-chip active" onclick="selectVariant(1800, this)">كيس مفرد (100غ)</button>
+            <button class="variant-chip" onclick="selectVariant(3200, this)">باقة توفيرية (كيسين)</button>
+          </div>
+        </div>
+
+        <!-- Quantity Controls -->
+        <div class="qty-section">
+          <label class="form-label">الكمية:</label>
+          <div class="qty-ctrl">
+            <button class="qty-btn" type="button" onclick="changeQty(-1)">−</button>
+            <div class="qty-num" id="qtyNum">1</div>
+            <button class="qty-btn" type="button" onclick="changeQty(1)">+</button>
+          </div>
+        </div>
+
+        <!-- Direct Prototype Order Box -->
+        <div class="order-summary-panel">
+          <div class="summary-title">طلب سريع للمنتج</div>
+
+          <div class="checkout-form">
+            <div class="form-row">
+              <div>
+                <label class="form-label">الاسم الكامل *</label>
+                <input id="clientName" class="form-input" type="text" placeholder="مثال: محمد أمين"/>
+              </div>
+              <div>
+                <label class="form-label">رقم الهاتف *</label>
+                <input id="clientPhone" class="form-input" type="tel" placeholder="05 / 06 / 07..."/>
+              </div>
+            </div>
+
+            <div>
+              <label class="form-label">الولاية / العنوان</label>
+              <input id="clientAddress" class="form-input" type="text" placeholder="الولاية والبلدية"/>
+            </div>
+
+            <div class="summary-row total-row">
+              <span>المجموع التقديري:</span>
+              <span id="summaryTotal">1,800 د.ج</span>
+            </div>
+
+            <button class="checkout-submit" type="button" onclick="submitPrototypeOrder()">
+              تأكيد الطلب التجريبي
+            </button>
+            <p class="prototype-note">* هذه صفحة تجريبية لتقييم التصميم والمنتج أمام الزبون ولن يتم تسجيل دفع مالي حقيقي.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
